@@ -6,3 +6,5 @@ RUN apt-get update && apt-get install -y \
     mercurial \
     subversion \
     && rm -rf /var/lib/apt/lists/*
+
+всегда явно указывай теги, и вообще все

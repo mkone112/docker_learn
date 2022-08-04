@@ -1,0 +1,2 @@
+redirect output to v
+v=$(echo hi)
