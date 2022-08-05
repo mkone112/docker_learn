@@ -1,3 +1,9 @@
+в отличие от большинства unix тулз рассматривает флаги как bool
+    docker logs -f ~ docker -f=true
+    docker logs ~ docker -f=false
+    docker logs --help=0 ~ docker logs
+    docker logs --help=1 ~ docker logs help=true ~ docker logs --help ...
+    # но при этом by def они мб =true(sic!) | false
 ругается на apt что не имеет стабильного cli интерфейса -> юзать apt-get
 
 аргумент RUN, CMD, ENTRYPOINT можно указывать в формате shell

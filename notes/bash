@@ -1,2 +1,22 @@
 redirect output to v
 v=$(echo hi)
+
+hostname -I
+# ip
+
+iputils-ping
+# ping
+
+compgen -c
+# all available commands
+
+id -nG
+# в каких группах я реально состою
+
+groups <user>
+# в какие добавлен, но может потребоваться su - ${USER}
+
+wc
+# word count
+    -l
+    # lines
