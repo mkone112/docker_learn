@@ -20,3 +20,6 @@ wc
 # word count
     -l
     # lines
+
+ln --symbolic file.txt symlink
+# create symlink

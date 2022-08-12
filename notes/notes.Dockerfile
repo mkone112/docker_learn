@@ -1,9 +1,21 @@
+список параметров
+    docker run -a STDIN -a STDOUT ...
+
 в отличие от большинства unix тулз рассматривает флаги как bool
+# парсит много вариантов true, false https://pkg.go.dev/strconv
     docker logs -f ~ docker -f=true
     docker logs ~ docker -f=false
     docker logs --help=0 ~ docker logs
-    docker logs --help=1 ~ docker logs help=true ~ docker logs --help ...
+    docker logs --help=1 ~ docker logs help=true ~ docker logs --help ~ docker logs --help=t
     # но при этом by def они мб =true(sic!) | false
+
+    # invalid syntax
+    docker logs --help=hi
+    docker logs --help=10
+    # важен только последний переданный
+    docker --help=false --help=false ~ docker --help=true --help=false
+
+main process в докер имеет pid=1
 ругается на apt что не имеет стабильного cli интерфейса -> юзать apt-get
 
 аргумент RUN, CMD, ENTRYPOINT можно указывать в формате shell

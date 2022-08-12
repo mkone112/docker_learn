@@ -1,0 +1,5 @@
+потыкать attach, expose, publish
+потыкать docker cp с -a, почитать документацию, права
+docker exec
+main process pid ?=1
+docker commit?
