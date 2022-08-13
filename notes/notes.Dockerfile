@@ -16,6 +16,8 @@
     docker --help=false --help=false ~ docker --help=true --help=false
 
 main process в докер имеет pid=1
+# cat /proc/1/cmdline
+
 ругается на apt что не имеет стабильного cli интерфейса -> юзать apt-get
 
 аргумент RUN, CMD, ENTRYPOINT можно указывать в формате shell

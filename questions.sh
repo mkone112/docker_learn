@@ -26,3 +26,6 @@ docker attach --detach-keys ?
 run --name <name>  remove_if_exist? -> только создавать alias
 
 docker rm --link?
+
+docker export
+cowardly refusing to save to a terminal. Use the -o flag or redirect
