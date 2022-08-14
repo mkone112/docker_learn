@@ -29,3 +29,5 @@ docker rm --link?
 
 docker export
 cowardly refusing to save to a terminal. Use the -o flag or redirect
+
+github.com/using-docker/using_docker_in_dev

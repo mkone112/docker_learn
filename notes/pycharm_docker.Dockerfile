@@ -1,0 +1,1 @@
+flask console пашет если имя модуля app, или установлена FLASK_APP=app в pycharm или dockerfile
