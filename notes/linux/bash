@@ -1,3 +1,6 @@
+shell pid
+    echo $$
+
 redirect output to v
 v=$(echo hi)
 
@@ -25,3 +28,11 @@ ln --symbolic file.txt symlink
 # create symlink
 
 PS1="$PS1\n"
+
+exec
+# позволяет не создавать новый процесс и обеспечить получение и обработку сигналов
+    exec $$
+    exec python3 -c "import os;print(os.getpid());import time;time.sleep(3)"
+
+    #!/bin/bash
+    exec uwsgi ...
