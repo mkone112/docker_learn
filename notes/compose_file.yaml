@@ -1,0 +1,21 @@
+сервис в терминах compose ~ контейнер в docker
+
+image
+# ~ docker create IMAGE
+# тег или id
+
+build
+# docker build context
+# походу при билде ищет "Dockerfile" в указанном контексте
+
+ports
+# ~ docker run -p
+# используй кавычки
+  56:56
+  # hex число в синтаксисе YAML expressions
+
+environment
+# ~ ENV
+
+volumes
+# ~ -v
