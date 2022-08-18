@@ -6,8 +6,8 @@ additional property is not allowed - старый формат compose
 -H unix:///var/run/docker.sock
 sudo service docker stop
 sudo rm -rf /var/lib/docker
-или
-sudo rm /var/lib/docker/network/files/local-kv.db
+#или
+#sudo rm /var/lib/docker/network/files/local-kv.db
 
 sudo service docker start
 
@@ -17,5 +17,8 @@ sudo service docker start
 
     gpg ... cant connect ipc agent
     # нужен инет побыстрей
+        systemctl --user status gpg-agent
+    # может потребоваться снести кеш
+        gpg-connect-agent reloadagent /bye
 
 >> reboot
