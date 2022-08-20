@@ -36,3 +36,5 @@ exec
 
     #!/bin/bash
     exec uwsgi ...
+
+    apt-cache search --names-only '^python3?-numpy' | awk '{print $1}'

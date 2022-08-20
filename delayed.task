@@ -3,3 +3,5 @@ docker commit?
 uwsgi, uvicorn
 
 compose plugins pycharm?
+
+встроить отладчик в uwsgi
