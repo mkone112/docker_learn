@@ -1,2 +1,33 @@
 при не рабочем usb tethering - смотреть логи и перезапускать
 usbmuxd
+    lsusb  | grep Apple
+    ip a # дб новый интерфейс
+    пробуем поднять
+    ip link set <interface> up
+    dhclient <interface>
+    ip address
+    если все ок
+    должен быть установлен netplan
+        sudo apt install netplan.io
+    netplan try
+    может потребоваться писать конфиг
+    /etc/netplan/<file>
+        ...
+          ethernets:
+            <interface>:
+              dhcp4: yes
+
+
+    sudo touch /etc/NetworkManager/conf.d/10-globally-managed-devices.conf
+        [keyfile]
+        unmanaged-devices=*,except:type:wifi,except:type:gsm,except:type:cdma,except:type:wwan,except:type:ethernet
+    /etc/NetworkManager/NetworkManager.conf
+        [main]
+        plugins=ifupdown,keyfile
+
+        [ifupdown]
+        managed=true
+
+        [device]
+        wifi.scan-rand-mac-address=no
+sudo systemctl restart NetworkManager
