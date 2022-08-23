@@ -1,3 +1,5 @@
+как исключить всякий мусор из buildcontext?
+
 docker ps filter ?
 docker inspect --format ?
 

@@ -38,3 +38,9 @@ exec
     exec uwsgi ...
 
     apt-cache search --names-only '^python3?-numpy' | awk '{print $1}'
+
+    # package files location
+    dpkg -L <pkg>
+
+    # disable ibus
+    sudo dpkg-divert --package im-config --rename /usr/bin/ibus-daemon

@@ -22,3 +22,35 @@ module not found в консоли - проблема с пробросом work
 
 WORKING_DIR_AND_PYTHON_PATHS
 # захардкоженный в java литерал
+
+attach to process
+# не пашет с докером
+    проверить
+    echo 0 | sudo tee /proc/sys/kernel/yama/ptrace_scope
+
+открыть порт в докере
+pydevd --port 10000 --client 0.0.0.0 --file echo.py
+
+# то что он делает
+python -u /opt/.pycharm_helpers/pydev/pydevd.py --module --multiprocess --qt-support=auto --port 54433 --file flask run --port 9000
+
+
+как по факту
+    не забыть поднимать сервер на нужном порту и 0.0.0.0(чтобы был доступен с хоста)
+    указать порт в конфиге дебага или композе
+
+нуждается в доработке
+извращение - заменить uwsgi написанный не на python и который не мб отлажен(?) gdb - на встроенный wsgiref.simple_server
+    run/debug configuration
+        python script
+
+    в результате будет выполнен(-m добавленный в конце игнорится!)
+        * module name: app
+        * пробросить нужный порт докера
+        * interpreter options(будет передан в python)
+            -c "from wsgiref.simple_server import *;from app import app;s=WSGIServer(('0.0.0.0', 9000), WSGIRequestHandler);s.set_app(app);s.serve_forever();"
+            # ничего не выведет ибо не должно
+        * working directory: расположение app
+        результат выполнит
+            python -c "from wsgiref.simple_server import *;from app import app;s=WSGIServer(('0.0.0.0', 9000), WSGIRequestHandler);s.set_app(app);s.serve_forever();" -u /opt/.pycharm_helpers/pydev/pydevd.py --module --multiprocess --qt-support=auto --port 51012 --file app
+            т.е. serve_forever залочит запуск отладчика - почти дедлок
