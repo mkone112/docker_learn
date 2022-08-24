@@ -36,6 +36,7 @@ docker run -v a:/hi
 
 --mount
 # предпочтительнее -v
+    --mount "type=bind,src=$(pwd)/,dst=/app"
 
 контейнеры данных
 # популярный способ разделения данных

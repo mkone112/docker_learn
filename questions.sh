@@ -1,4 +1,11 @@
 как исключить всякий мусор из buildcontext?
+  https://forums.docker.com/t/how-to-avoid-transferring-everything-as-build-context/94265/17
+
+  DOCKER_BUILDKIT=1
+  или
+  dockerignore
+  или
+  копировать все в отдельную папку
 
 docker ps filter ?
 docker inspect --format ?

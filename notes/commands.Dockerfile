@@ -71,6 +71,9 @@ run
     --workdir
     # replace WORKDIR
 
+    docker run --rm --security-opt apparmor=unconfined
+    # вроде обходит apparmor
+
 attach
 # attach to main process in cont
 
