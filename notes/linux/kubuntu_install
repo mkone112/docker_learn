@@ -1,0 +1,42 @@
+# включаем гибернацию
+# https://blog.ivansmirnov.name/how-to-set-up-hibernate-on-ubuntu-20-04/
+...
+sudo apt install pm-utils hibernate
+...
+echo RESUME=UUID=f47cfa22-e326-42d8-abb4-e59d4082483f   | sudo tee /etc/initramfs-tools/conf.d/resume
+...
+sudo update-initramfs -c -k all
+...
+# включаем кнопку в меню
+# https://askubuntu.com/questions/1273783/kubuntu-no-hibernation-button-settings-in-kde
+
+sudo nano /var/lib/polkit-1/localauthority/50-local.d/com.ubuntu.enable-hibernate.pkla
+    [Re-enable hibernate by default in upower]
+    Identity=unix-user:*
+    Action=org.freedesktop.upower.hibernate
+    ResultActive=yes
+    [Re-enable hibernate by default in logind]
+    Identity=unix-user:*
+    Action=org.freedesktop.login1.hibernate
+    ResultActive=yes
+restart
+
+
+# vivaldi
+
+sudo add-apt-repository 'deb https://repo.vivaldi.com/archive/deb/ stable main'
+sudo apt update && sudo apt install vivaldi-stable # вывалит ключ
+sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys КЛЮЧ
+sudo apt update && sudo apt install vivaldi-stable
+
+sudo snap install snap-store
+
+красный stderr в bash(echo >&2 не умеет): stderred
+
+apt install zsh
+
+ohmyzsh bulletrain theme
+
+Добавить в плагины grc
+
+sudo apt install grc
