@@ -44,3 +44,29 @@ exec
 
     # disable ibus
     sudo dpkg-divert --package im-config --rename /usr/bin/ibus-daemon
+
+не вижу особых преимущест printf над echo в своих режимах использования
+
+concat
+a=${a}${b}
+
+a+=$b
+
+echo
+ '*? не интерполируются'
+ "$интерполяция переменных"
+; - выполнит команду даже if прошлая сфейлилась
+&& - выполнит команду oi выполнилась прошлая
+
+[[ ]] не доступен в sh
+
+
+покрасить echo >&2 в красный
+нужно было бы как-то заменить >&2 на '1> >(sed 's,.*,\x1B[32m&\x1B[0m,')'
+но я хз как такие алиасы писать, думаю никак
+
+( echo out ; echo err >&2 ) 2> >( sed s/^/e:/ >&2 )
+( echo out ; echo err >&2 ) 2> >( sed 's,.*,\x1B[32m&\x1B[0m,' )
+
+# охуеть закинуть в .zshrc!
+exec 2>>(while read line; do print '\e[91m'${(q)line}'\e[0m' > /dev/tty; print -n $'\0'; done &)

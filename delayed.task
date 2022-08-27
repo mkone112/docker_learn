@@ -5,3 +5,20 @@ uwsgi, uvicorn
 compose plugins pycharm?
 
 встроить отладчик в uwsgi
+
+qna << как объединить несколько : ${UI:?FUCK} или иначе упростить проверку ARG
+
+почему sh выводит цвет, а bash нет? -> не хватает -e
+# RUN ["/bin/bash", "-c", "echo ${RED}HI${COLOR_END}"]
+
+
+expand $(id -u) прямо в докерфайле?
+# вообще это плохая идея - не выйдет сбилдить для другого пользователся, но вообще интересно
+
+
+отрефачить в
+ARG myscript=<<EOF
+stuff
+EOF
+
+RUN &myscript

@@ -38,4 +38,4 @@ cowardly refusing to save to a terminal. Use the -o flag or redirect
 
 github.com/using-docker/using_docker_in_dev
 
-потыкать docker scan - Возможно он не работал из-за медленной сети через модем
+хз насчет heredock в exec form RUN

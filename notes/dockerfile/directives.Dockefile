@@ -1,0 +1,10 @@
+# syntax=
+# директива buildkit
+    docker/dockerfile:1.3-labs
+    # или
+    docker/dockerfile-upstream:1-labs
+    #включают поддержку HEREDOCK
+    docker/dockerfile:1 # последняя версия 1.x
+
+ЗАМЕНЯЕТ КОСУЮ ЧЕРТУ
+# escape=`
