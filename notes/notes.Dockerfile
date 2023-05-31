@@ -40,6 +40,12 @@ build
  #при передаче из stdin считается пустым
     docker build - < Dockerfile
     docker build - < context.tar.gz
+
+    echo -e 'FROM busybox\nRUN echo "hello world"' | docker build -
+    docker build -<<EOF
+    FROM busybox
+    RUN echo "hello world"
+    EOF
  # передается в демон как tar архив?!
  # можно исп tar.gz | bzip2
  можно указать Dockerfile внутри контекста

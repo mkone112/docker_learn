@@ -1,5 +1,5 @@
 here doc(ument)
-БЕЗ ИНЕТА - УБИВАЕТ всю затею
+БЕЗ ИНЕТА - УБИВАЕТ всю затею ->> возможно решится multistage
 #требует DOCKER_BUILDKIT=1 или buildx
 # syntax=docker/dockerfile:1.3-labs
 # или

@@ -1,19 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="21231e52-bbeb-4557-9c6c-858d66ca9d14" name="Changes" comment="idea profile; start build logging; zsh cfg">
-      <change afterPath="$PROJECT_DIR$/notes/dockerfile/build/arg_check.Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/notes/dockerfile/build/buildkit.Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/notes/dockerfile/directives.Dockefile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/notes/dockerfile/dockerfile_syntax/HEREDOCK.Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/notes/dockerfile/dockerfile_syntax/syntax.Dockerfile" afterDir="false" />
+    <list default="true" id="21231e52-bbeb-4557-9c6c-858d66ca9d14" name="Changes" comment="updates: argcheck, buildkit, bash,directives">
+      <change afterPath="$PROJECT_DIR$/kubernates/notes.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/delayed.task" beforeDir="false" afterPath="$PROJECT_DIR$/delayed.task" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notes/build/logging.Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/notes/dockerfile/build/logging.Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notes/dockerfile/build/arg_check.Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/notes/dockerfile/build/arg_check.Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notes/dockerfile/dockerfile_syntax/HEREDOCK.Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/notes/dockerfile/dockerfile_syntax/HEREDOCK.Dockerfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/notes/dockerfile/instructions.Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/notes/dockerfile/instructions.Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notes/linux/bash" beforeDir="false" afterPath="$PROJECT_DIR$/notes/linux/bash" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/notes/notes.Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/notes/notes.Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/questions.sh" beforeDir="false" afterPath="$PROJECT_DIR$/questions.sh" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,6 +18,13 @@
   <component name="ChangesViewManager">
     <option name="groupingKeys">
       <option value="directory" />
+    </option>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
     </option>
   </component>
   <component name="Git.Settings">
@@ -64,8 +66,9 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
     "last_opened_file_path": "/home/mk/PycharmProjects/docker_learn/notes/linux",
-    "settings.editor.selected.configurable": "vcs.Git"
+    "settings.editor.selected.configurable": "reference.settingsdialog.IDE.editor.colors.Console Font"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -113,7 +116,14 @@
       <option name="project" value="LOCAL" />
       <updated>1661502588791</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="updates: argcheck, buildkit, bash,directives">
+      <created>1661623978407</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1661623978408</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -131,6 +141,7 @@
     <MESSAGE value="потыкался в pycharm" />
     <MESSAGE value="volumes permissions" />
     <MESSAGE value="idea profile; start build logging; zsh cfg" />
-    <option name="LAST_COMMIT_MESSAGE" value="idea profile; start build logging; zsh cfg" />
+    <MESSAGE value="updates: argcheck, buildkit, bash,directives" />
+    <option name="LAST_COMMIT_MESSAGE" value="updates: argcheck, buildkit, bash,directives" />
   </component>
 </project>
